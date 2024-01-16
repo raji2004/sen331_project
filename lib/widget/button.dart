@@ -115,7 +115,7 @@ class ButtonWithIcon extends StatelessWidget {
       label: MyText(
         text,
         color: textColor,
-        fontSize: 13,
+        fontSize: 16,
       ),
     );
   }
