@@ -47,7 +47,7 @@ class _CheckBoxState extends State<CheckBox> {
        const SizedBox(width: 8), // Add some spacing
         MyText(
           widget.text,
-          fontSize: 16,
+          fontSize: 20,
         ),
       ],
     );

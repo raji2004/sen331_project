@@ -9,6 +9,7 @@ class InputBox extends StatefulWidget {
     this.borderRadius = 12,
     this.marginVertical = 6,
     this.isPassword = false,
+    this.prefixIcon = const Icon(Icons.email),
   });
   final double height;
   final double width;
@@ -16,6 +17,7 @@ class InputBox extends StatefulWidget {
   final double borderRadius;
   final double marginVertical;
   final bool isPassword;
+  final Icon prefixIcon;
 
   @override
   State<InputBox> createState() => _InputBoxState();
@@ -32,6 +34,10 @@ class _InputBoxState extends State<InputBox> {
         width: widget.width,
         child: TextField(
           decoration: InputDecoration(
+            filled: true,
+            fillColor: Primary.grey,
+            contentPadding: const EdgeInsets.symmetric(vertical: 10),
+            prefixIcon: widget.prefixIcon,
             hintStyle: const TextStyle(fontSize: 16),
             suffixIcon: widget.isPassword
                 ? IconButton(
@@ -47,8 +53,8 @@ class _InputBoxState extends State<InputBox> {
                 : null,
             enabledBorder: OutlineInputBorder(
               borderSide: const BorderSide(
-                width: 1,
-                color:Primary.black,
+                width: 0,
+                color:Primary.white,
               ),
               borderRadius: BorderRadius.circular(widget.borderRadius),
             ),
