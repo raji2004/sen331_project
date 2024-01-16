@@ -23,3 +23,7 @@ flutter:
     - assets/icons/google.png
     - assets/icons/facebook.png
     - assets/icons/apple.png
+    - assets/img/cloth1.png
+    - assets/img/cloth2.png
+    - assets/img/cloth3.png
+    - assets/img/hero.png

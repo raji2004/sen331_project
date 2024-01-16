@@ -38,7 +38,16 @@ class LoginPage extends StatelessWidget {
                 child: CheckBox("Remember me"),
               ),
               const SizedBox(height: 60),
-              Button(text: "sign Up", onPressed: () {},backgroundColor: Primary.black,),
+              Button(
+                text: "sign Up",
+                onPressed: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const BottomNavBar()),
+                );
+                },
+                backgroundColor: Primary.black,
+              ),
             ],
           ),
         ),

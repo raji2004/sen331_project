@@ -5,3 +5,5 @@ export './text.dart';
 export './input_box.dart';
 export './check_box.dart';
 export './pin_code_bar.dart';
+export './bottom_nav_bar.dart';
+export './heading.dart';

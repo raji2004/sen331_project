@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widget/widget.dart';
 import '../utils/utils.dart';
+import './login_page.dart';
 
 class RegistrationPage extends StatelessWidget {
   const RegistrationPage({
@@ -56,7 +57,12 @@ class RegistrationPage extends StatelessWidget {
             const SizedBox(height: 30),
             Button(
               text: "sign in with us",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginPage()),
+                );
+              },
               backgroundColor: Primary.black,
               horizontal: 110,
             )
