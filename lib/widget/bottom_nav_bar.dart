@@ -10,15 +10,14 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
-  static const List<Widget> _pages = <Widget>[
-   Home(),
-    Text('Search Page',
+  static final List<Widget> _pages = <Widget>[
+    const Home(),
+    Catalog(),
+    const Text('Cart Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Cart Page',
+    const Text('Favourite Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Favourite Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Profile Page',
+    const Text('Profile Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
   ];
 

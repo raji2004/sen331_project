@@ -30,10 +30,84 @@ class Home extends StatelessWidget {
               SizedBox(height: 20),
               Image(image: AssetImage('assets/img/hero.png')),
               SizedBox(height: 20),
-              Heading(text: "Categories")
+              Heading(text: "Categories"),
+              SizedBox(height: 10),
+              ClothTypes(),
+              SizedBox(height: 20),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(children: [
+                      Image(image: AssetImage('assets/img/sold.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold3.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold1.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold4.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold1.png')),
+                      SizedBox(height: 10),
+                    ]),
+                    Column(children: [
+                      Image(image: AssetImage('assets/img/sold.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold3.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold1.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold4.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold.png')),
+                      SizedBox(height: 10),
+                      Image(image: AssetImage('assets/img/sold1.png')),
+                      SizedBox(height: 10),
+                    ]),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ClothTypes extends StatelessWidget {
+  const ClothTypes({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          MyText("All"),
+          SizedBox(width: 10),
+          MyText("Dresses"),
+          SizedBox(width: 10),
+          MyText("Jackets & Blazers"),
+          SizedBox(width: 10),
+          MyText("Shirts"),
+          SizedBox(width: 10),
+          MyText("Pants & Jeans"),
+          SizedBox(width: 10),
+          MyText("Shorts"),
+          SizedBox(width: 10),
+          MyText("Skirts & Dresses"),
+          SizedBox(width: 10),
+          MyText("lingerie"),
+          SizedBox(width: 10),
+          MyText("boxers"),
+          SizedBox(width: 10),
+        ],
       ),
     );
   }
