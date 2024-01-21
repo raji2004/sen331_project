@@ -20,12 +20,15 @@ class Payment extends StatelessWidget {
             const Text('Thank you for shopping!', style: TextStyle(color: Colors.grey,fontSize: 20)),
             const SizedBox(height: 40.0),
             ElevatedButton(
-              style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Primary.black), foregroundColor: MaterialStatePropertyAll(Primary.white),),              
+              style: const ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Primary.black), foregroundColor: MaterialStatePropertyAll(Primary.white),
+                padding: MaterialStatePropertyAll(EdgeInsets.symmetric(horizontal: 90)),
+              ),              
               onPressed: () {
                 Navigator.pop(context);
                 Navigator.pop(context);
               }, 
-              child: const Text('Continue', style: TextStyle(fontSize: 25),),
+              child: const Text('Continue', style: TextStyle(fontSize: 20),),
             ),
           ]
         ),

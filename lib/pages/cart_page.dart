@@ -81,16 +81,20 @@ class Cart extends StatelessWidget {
                       ]          
                     ),
                     const SizedBox(height: 20),
-                    ElevatedButton(
-                        style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Primary.black), foregroundColor: MaterialStatePropertyAll(Primary.white)),
-                        onPressed: () {
+                    ElevatedButton.icon(
+                      style: const ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Primary.black),
+                        padding: MaterialStatePropertyAll(EdgeInsets.symmetric(horizontal: 90)),
+                      ),
+                      icon: const Icon(Icons.shopping_cart_checkout, color: Primary.white,),
+                      label: const Text('Checkout', style: TextStyle(color: Primary.white, fontSize: 20),),
+                      onPressed: () {
                         Navigator.push(
                           context, 
                           MaterialPageRoute(builder: (context) => const Checkout()
                           ),
                         );
                       },
-                      child: const Text('Checkout' ,style: TextStyle(fontSize: 25)),
                     ),
                   ]
                 ),

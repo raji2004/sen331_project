@@ -67,7 +67,10 @@ class Checkout extends StatelessWidget {
               ),
               const SizedBox(height: 20.0,),
               ElevatedButton(
-                style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Primary.black), foregroundColor: MaterialStatePropertyAll(Primary.white)),
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Primary.black), foregroundColor: MaterialStatePropertyAll(Primary.white),
+                  padding: MaterialStatePropertyAll(EdgeInsets.symmetric(horizontal: 90)),
+                ),                  
                 onPressed:() {
                   Navigator.push(
                     context,
@@ -76,7 +79,7 @@ class Checkout extends StatelessWidget {
                     ),
                   );
                 }, 
-                child: const Text('Pay', style: TextStyle(fontSize: 27.0),)
+                child: const Text('Pay',style: TextStyle(fontSize: 20),),
               ),
             ],
           ),
