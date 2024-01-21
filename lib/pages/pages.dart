@@ -6,3 +6,6 @@ export './dresses_page.dart';
 export './cart_page.dart';
 export './checkout_page.dart';
 export './payment_page.dart';
+export 'favorite_page.dart';
+export './profile_page.dart';
+export './details_page.dart';

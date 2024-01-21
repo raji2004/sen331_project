@@ -43,4 +43,6 @@ flutter:
     - assets/img/mastercard.png
     - assets/img/paypal.png
     - assets/img/creditcard.png
+    - assets/icons/globe.png
+    - assets/icons/about.png
    
