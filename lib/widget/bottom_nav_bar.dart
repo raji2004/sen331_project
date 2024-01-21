@@ -13,8 +13,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   static final List<Widget> _pages = <Widget>[
     const Home(),
     Catalog(),
-    const Text('Cart Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    const Cart(),
     const Text('Favourite Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
     const Text('Profile Page',
