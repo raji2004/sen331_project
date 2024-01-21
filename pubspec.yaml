@@ -39,5 +39,8 @@ flutter:
     - assets/img/cart1.png
     - assets/img/cart2.png
     - assets/img/cart3.png
-    - assets/img/checkout.png
+    - assets/img/applepay.png
+    - assets/img/mastercard.png
+    - assets/img/paypal.png
+    - assets/img/creditcard.png
    

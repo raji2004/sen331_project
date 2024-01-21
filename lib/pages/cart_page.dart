@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../widget/widget.dart';
 import '../utils/utils.dart';
+import './checkout_page.dart';
+
 
 class Cart extends StatelessWidget {
   const Cart({super.key});
@@ -19,21 +21,21 @@ class Cart extends StatelessWidget {
         ],
         shadowColor: Primary.white,
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(8.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Center(child: MyText('You have 3 products in your Cart')),
-              SizedBox(height: 20),
-              Image(image: AssetImage('assets/img/cart1.png')),
-              SizedBox(height: 10),
-              Image(image: AssetImage('assets/img/cart2.png')),
-              SizedBox(height: 10),
-              Image(image: AssetImage('assets/img/cart3.png')),
-              SizedBox(height: 40),
-              Row(
+              const Center(child: MyText('You have 3 products in your Cart')),
+              const SizedBox(height: 20),
+              const Image(image: AssetImage('assets/img/cart1.png')),
+              const SizedBox(height: 10),
+              const Image(image: AssetImage('assets/img/cart2.png')),
+              const SizedBox(height: 10),
+              const Image(image: AssetImage('assets/img/cart3.png')),
+              const SizedBox(height: 40),
+              const Row(
                 children: [
                   SizedBox(width: 30),
                   Text('Total Price', style: TextStyle(color: Colors.grey, fontSize: 18)),
@@ -41,7 +43,7 @@ class Cart extends StatelessWidget {
                   Text('133.95\$', style: TextStyle(color: Colors.grey, fontSize: 18)),
                 ],            
               ),
-              Row(
+              const Row(
                 children: [
                   SizedBox(width: 30),
                   Text('Discount', style: TextStyle(color: Colors.grey, fontSize: 18)),
@@ -49,7 +51,7 @@ class Cart extends StatelessWidget {
                   Text('14.95\$', style: TextStyle(color: Colors.grey, fontSize: 18)),
                 ],            
               ),
-              Row(
+              const Row(
                 children: [
                   SizedBox(width: 30),
                   Text('Estimated delivery fees', style: TextStyle(color: Colors.grey, fontSize: 18)),
@@ -57,12 +59,12 @@ class Cart extends StatelessWidget {
                   Text('Free', style: TextStyle(color: Colors.grey, fontSize: 18)),
                 ],            
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Padding(
-                padding: EdgeInsets.all(4.0),
+                padding: const EdgeInsets.all(4.0),
                 child: Column(
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         SizedBox(width: 30),
                         Text('Total:', style: TextStyle(fontSize: 25)),
@@ -70,7 +72,7 @@ class Cart extends StatelessWidget {
                         Text('119.00\$', style: TextStyle(fontSize: 25)),
                       ]        
                     ),
-                    Row(
+                    const Row(
                       children: [
                         SizedBox(width: 30),
                         Text('Saving Applied', style: TextStyle(color: Colors.grey, fontSize: 18)),
@@ -78,8 +80,18 @@ class Cart extends StatelessWidget {
                         Text('14.95\$', style: TextStyle(color: Colors.grey, fontSize: 18)),
                       ]          
                     ),
-                    SizedBox(height: 20),
-                    Image(image: AssetImage('assets/img/checkout.png'))
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                        style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Primary.black), foregroundColor: MaterialStatePropertyAll(Primary.white)),
+                        onPressed: () {
+                        Navigator.push(
+                          context, 
+                          MaterialPageRoute(builder: (context) => const Checkout()
+                          ),
+                        );
+                      },
+                      child: const Text('Checkout' ,style: TextStyle(fontSize: 25)),
+                    ),
                   ]
                 ),
               ),
