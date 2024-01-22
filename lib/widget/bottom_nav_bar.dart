@@ -14,10 +14,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
     const Home(),
     Catalog(),
     const Cart(),
-    const Text('Favourite Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    const Text('Profile Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    const Favorite(),
+    const Profile(),
   ];
 
   void _onItemTap(int index) {

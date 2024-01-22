@@ -26,7 +26,7 @@ class Checkout extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center, 
             children: [
-              const Row(children: [Text('Payment', style: TextStyle(fontSize: 20),)]),
+              const Heading(text: 'Payment'),
               const SizedBox(height: 15.0),
               const Image(image: AssetImage('assets/img/mastercard.png')),
               const SizedBox(height: 10.0),
