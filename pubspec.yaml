@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   pin_code_fields: ^8.0.1
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -43,4 +44,8 @@ flutter:
     - assets/img/mastercard.png
     - assets/img/paypal.png
     - assets/img/creditcard.png
+    - assets/img/pic1.png
+    - assets/img/pic2.png
+    - assets/img/pic3.png
+    - assets/img/pic4.png
    

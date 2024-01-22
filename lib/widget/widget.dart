@@ -8,3 +8,4 @@ export './pin_code_bar.dart';
 export './bottom_nav_bar.dart';
 export './heading.dart';
 export './catalog_options.dart';
+export './cloth_options.dart';
