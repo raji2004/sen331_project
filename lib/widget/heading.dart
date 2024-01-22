@@ -10,14 +10,14 @@ class Heading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
+      alignment: Alignment.centerLeft,
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w600,
         ),
       ),
-      alignment: Alignment.centerLeft,
     );
   }
 }

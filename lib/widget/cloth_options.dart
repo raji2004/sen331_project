@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sen331_project/widget/widget.dart';
+import '../widget/widget.dart';
 import '../utils/utils.dart';
+// ignore: unused_import
+import '../pages/pages.dart';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ClothOptions extends StatefulWidget {
   final String img;
@@ -17,14 +21,36 @@ class ClothOptions extends StatefulWidget {
   State<ClothOptions> createState() => _ClothOptionsState();
 }
 
+
+ 
+
 class _ClothOptionsState extends State<ClothOptions> {
   bool isFavorite = false;
+
+   Future<bool> addToCart(String cartOption) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    List<String>? currentItems = prefs.getStringList('cart');
+    currentItems ??= [];
+
+    // Add the cartOption string to the current items list
+    currentItems.add(cartOption);
+    debugPrint(currentItems.toString());
+
+    await prefs.setStringList('cart', currentItems);
+    // Trigger a rebuild of the widget
+    setState(() {});
+    debugPrint("true");
+    return true;
+  }
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 150,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image(image: AssetImage(widget.img)),
           Row(
@@ -44,7 +70,19 @@ class _ClothOptionsState extends State<ClothOptions> {
               ),
             ],
           ),
-          MyText(widget.name, fontSize: 12)
+          MyText(widget.name, fontSize: 12),
+          const SizedBox( height: 10,),
+           ButtonWithIcon(
+            icon: const Icon(Icons.shopping_cart_outlined),
+            text: "Add to cart",
+            backgroundColor: Primary.black,
+            textColor: Primary.white,
+            horizontal: 18,
+            vertical: 10,
+            onPressed: (){
+              addToCart(widget.img);
+            },
+          )
         ],
       ),
     );
