@@ -32,25 +32,28 @@ class RegistrationPage extends StatelessWidget {
               color: Secondary.grey,
             ),
             const SizedBox(height: 30),
-            const ButtonWithIcon(
-              icon: Image(image: AssetImage('assets/icons/google.png')),
+             ButtonWithIcon(
+              icon: const Image(image: AssetImage('assets/icons/google.png')),
               text: 'continue with google',
               horizontal: 80,
+              onPressed: () {},
             ),
             const SizedBox(height: 10),
-            const ButtonWithIcon(
-              icon: Image(image: AssetImage('assets/icons/facebook.png')),
+             ButtonWithIcon(
+              icon: const Image(image: AssetImage('assets/icons/facebook.png')),
               text: 'continue with facebook',
               horizontal: 70,
               backgroundColor: AppColors.blue,
+              onPressed: () {},
             ),
             const SizedBox(height: 10),
-            const ButtonWithIcon(
-              icon: Image(image: AssetImage('assets/icons/apple.png')),
+             ButtonWithIcon(
+              icon: const Image(image: AssetImage('assets/icons/apple.png')),
               text: 'continue with apple',
               horizontal: 90,
               backgroundColor: Primary.black,
               textColor: Primary.white,
+              onPressed: () {},
             ),
             const SizedBox(height: 30),
             const LineWithText(),

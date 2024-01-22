@@ -8,7 +8,7 @@ class Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const MyText("                     Details"),
+        title: const MyText("Details"),
         backgroundColor: Primary.white,
       ),
       body: Padding(
