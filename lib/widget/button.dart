@@ -79,6 +79,7 @@ class ButtonWithIcon extends StatelessWidget {
     super.key,
     required this.icon,
     required this.text,
+    required this.onPressed,
     this.borderWidth = 1,
     this.vertical = 10.0,
     this.horizontal = 100.0,
@@ -93,6 +94,7 @@ class ButtonWithIcon extends StatelessWidget {
   final double vertical;
   final double horizontal;
   final dynamic icon;
+  final VoidCallback onPressed;
 
   ButtonStyle getButtonStyle() {
     return ButtonStyle(
@@ -110,7 +112,7 @@ class ButtonWithIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
       style: getButtonStyle(),
-      onPressed: () {},
+      onPressed: onPressed,
       icon: icon,
       label: MyText(
         text,

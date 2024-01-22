@@ -12,7 +12,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
   static final List<Widget> _pages = <Widget>[
     const Home(),
-    Catalog(),
+    const Catalog(),
     const Cart(),
     const Favorite(),
     const Profile(),
